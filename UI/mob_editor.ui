@@ -1,0 +1,3535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Mob</class>
+ <widget class="QWidget" name="Mob">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="windowTitle">
+   <string>Mob editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Ico.png</normaloff>../Ico.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #121212</string>
+  </property>
+  <widget class="QLabel" name="debag">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>530</y>
+     <width>280</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #ffffff</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>560</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	color: #ffffff;
+	background: rgb(85, 0, 0);
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(170, 0, 0);
+}
+
+QPushButton::pressed {
+    background-color: rgb(224, 0, 0);     
+}</string>
+   </property>
+   <property name="text">
+    <string>Отмена</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="next">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>560</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	color: #ffffff;
+	background: rgb(0, 85, 0);
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+   </property>
+   <property name="text">
+    <string>Продолжить</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="headline">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>531</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>19</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #ffffff</string>
+   </property>
+   <property name="text">
+    <string>Mob creator</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="buddy">
+    <cstring>next</cstring>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="Settings">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>520</width>
+     <height>440</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #ffffff</string>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::North</enum>
+   </property>
+   <property name="tabShape">
+    <enum>QTabWidget::Rounded</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="main_settings">
+    <attribute name="title">
+     <string>Главные настройки</string>
+    </attribute>
+    <widget class="QSpinBox" name="health_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>90</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="keyboardTracking">
+      <bool>true</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>20</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="mount_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>250</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>None</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ARMOR_STAND</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BEE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BLAZE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAVE_SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CHICKEN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CREEPER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DOLPHIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DONKEY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ELDER_GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMITE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_CRYSTAL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_DRAGON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EVOKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EXPERIENCE_ORB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GHAST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GIANT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HUSK</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ILLUSIONER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IRON_GOLEM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MULE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MUSHROOM_COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OCELOT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PARROT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PHANTOM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>POLAR_BEAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUFFERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RABBIT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RAVAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SALMON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHEEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHULKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SILVERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SLIME</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SNOWMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SQUID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRAY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TNT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TROPICAL_FISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TURTLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VEX</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VINDICATOR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WANDERING_TRADER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITCH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER_SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WOLF</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QSpinBox" name="damage_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>130</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Equipment">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>10</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Equipment:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="damage">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>130</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Damage:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="health">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>90</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Health:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="faction_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>210</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BEE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BLAZE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAVE_SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CHICKEN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CREEPER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DOLPHIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DONKEY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ELDER_GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMITE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_CRYSTAL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_DRAGON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EVOKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EXPERIENCE_ORB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GHAST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GIANT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HUSK</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ILLUSIONER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IRON_GOLEM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MULE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MUSHROOM_COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OCELOT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PARROT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PHANTOM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>POLAR_BEAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUFFERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RABBIT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RAVAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SALMON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHEEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHULKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SILVERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SLIME</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SNOWMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SQUID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRAY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TROPICAL_FISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TURTLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VEX</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VINDICATOR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WANDERING_TRADER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITCH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER_SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WOLF</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QTabWidget" name="equip">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>10</y>
+       <width>141</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="tabPosition">
+      <enum>QTabWidget::North</enum>
+     </property>
+     <property name="tabShape">
+      <enum>QTabWidget::Rounded</enum>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="documentMode">
+      <bool>false</bool>
+     </property>
+     <property name="tabsClosable">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="up">
+      <attribute name="title">
+       <string>Вверх</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="helmet_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Шлем</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="helmet">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_HELMET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_HELMET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_HELMET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_HELMET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CHAINMAIL_HELMET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LEATHER_HELMET</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="chestplate_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Торс</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="chestplate">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_CHESTPLATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_CHESTPLATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_CHESTPLATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_CHESTPLATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CHAINMAIL_CHESTPLATE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LEATHER_CHESTPLATE</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="down">
+      <attribute name="title">
+       <string>Низ</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="leggings_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Поножи</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="leggings">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_LEGGINGS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_LEGGINGS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_LEGGINGS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_LEGGINGS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CHAINMAIL_LEGGINGS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LEATHER_LEGGINGS</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="boots_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Ботинки</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="boots">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_BOOTS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_BOOTS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_BOOTS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_BOOTS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>CHAINMAIL_BOOTS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LEATHER_BOOTS</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="hands">
+      <attribute name="title">
+       <string>Руки</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="offhand_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Левая рука</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="offhand">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_AXE
+</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STICK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BOWL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MUSHROOM_STEW</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STRING</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FEATHER</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GUNPOWDER</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WHEAT_SEEDS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WHEAT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BREAD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FLINT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PORKCHOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>COOKED_PORKCHOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PAINTING</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_APPLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ENCHANTED_GOLDEN_APPLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WATER_BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAVA_BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MINECART</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SADDLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>REDSTONE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SNOWBALL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Новый элемент</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="hand_2">
+         <property name="baseSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+           <kerning>true</kerning>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;</string>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>Правая рука</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignHCenter|Qt::AlignTop</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="hand">
+         <property name="cursor">
+          <cursorShape>PointingHandCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>None</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WOODEN_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STONE_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>IRON_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_AXE
+</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>DIAMOND_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_SWORD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_SHOVEL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_PICKAXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_AXE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>NETHERITE_HOE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STICK</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BOWL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MUSHROOM_STEW</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>STRING</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FEATHER</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GUNPOWDER</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WHEAT_SEEDS</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WHEAT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BREAD</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FLINT</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PORKCHOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>COOKED_PORKCHOP</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>PAINTING</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GOLDEN_APPLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>ENCHANTED_GOLDEN_APPLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WATER_BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>LAVA_BUCKET</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MINECART</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SADDLE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>REDSTONE</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>SNOWBALL</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Новый элемент</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="type">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>10</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Type:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="npc_type">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>ARMOR_STAND</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BABY_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BEE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BLAZE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CAVE_SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CHICKEN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COD</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CREEPER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DOLPHIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DONKEY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>DROWNED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ELDER_GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDERMITE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_CRYSTAL</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ENDER_DRAGON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EVOKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>EXPERIENCE_ORB</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GHAST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GIANT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GUARDIAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HOGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HUSK</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ILLUSIONER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>IRON_GOLEM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MULE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>MUSHROOM_COW</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>OCELOT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PARROT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PHANTOM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIGLIN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PIG_ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>POLAR_BEAR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PUFFERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RABBIT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RAVAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SALMON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHEEP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SHULKER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SILVERFISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SKELETON_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SLIME</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SNOWMAN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SPIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SQUID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRAY</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>STRIDER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TNT</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TROPICAL_FISH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TURTLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VEX</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VILLAGER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>VINDICATOR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WANDERING_TRADER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITCH</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WITHER_SKELETON</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WOLF</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_HORSE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>ZOMBIE_VILLAGER</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLineEdit" name="display_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>50</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="mount">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>250</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Mount:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="display">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>50</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Display:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="faction">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>210</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Faction:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="armor">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>170</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Armor:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="armor_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>170</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="adw_settings">
+    <attribute name="title">
+     <string>Расширенные настройки</string>
+    </attribute>
+    <widget class="QLabel" name="MoveSpeed">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>10</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="text">
+      <string>MovementSpeed:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="MCDist">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="text">
+      <string>  MaxCombatDistance: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="KBResist">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>161</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="text">
+      <string>KnockbackResistance:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Despawn">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>210</y>
+       <width>71</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="text">
+      <string>Despawn:</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="MoveSpeed_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>10</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>0.500000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="stepType">
+      <enum>QAbstractSpinBox::DefaultStepType</enum>
+     </property>
+     <property name="value">
+      <double>0.500000000000000</double>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="MCDist_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>60</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="maximum">
+      <number>1000</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="KBResist_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>110</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+    </widget>
+    <widget class="QLabel" name="PODrop">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>160</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="text">
+      <string>PreventOtherDrops:</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Despawn_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>210</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>false</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="PODrop_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>160</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>false</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="bossbar_settings">
+    <attribute name="title">
+     <string>BossBar</string>
+    </attribute>
+    <widget class="QLabel" name="b_style">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Style:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="b_title_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>50</y>
+       <width>141</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="b_color">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>130</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Color:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="b_range">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Range:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="b_title">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Title:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="b_range_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>90</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::NoButtons</enum>
+     </property>
+     <property name="maximum">
+      <number>9999</number>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="b_color_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>130</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>PINK</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>BLUE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>RED</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GREEN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>GREEN</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>PURPLE</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>WHITE</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QComboBox" name="b_style_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>170</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>SOLID</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SEGMENTED_6</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SEGMENTED_10</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SEGMENTED_12</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>SEGMENTED_12</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="b_enable">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="baseSize">
+      <size>
+       <width>0</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>11</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: #ffffff</string>
+     </property>
+     <property name="lineWidth">
+      <number>1</number>
+     </property>
+     <property name="midLineWidth">
+      <number>0</number>
+     </property>
+     <property name="text">
+      <string>Enabled:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTop|Qt::AlignTrailing</set>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="margin">
+      <number>0</number>
+     </property>
+     <property name="indent">
+      <number>0</number>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="b_enable_2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>10</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <italic>true</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>false</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

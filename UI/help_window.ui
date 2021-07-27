@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>hw</class>
+ <widget class="QWidget" name="hw">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>367</width>
+    <height>679</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Ico.png</normaloff>../Ico.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #121212
+</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>351</width>
+     <height>671</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="styleSheet">
+       <string notr="true">color: #ffffff</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="CM">
+       <attribute name="title">
+        <string>Кастомный моб</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: #ffffff</string>
+          </property>
+          <property name="text">
+           <string>&quot;Name Class:&quot;-глобальное название моба,
+оно будет использоваться в плагине.
+
+&quot;Type:&quot;-тип моба,то есть как будет он
+выглядеть в игре.
+
+&quot;Display:&quot;-название моба которое будет
+ отображатся в игре.
+
+&quot;Health:&quot;-Здоровь моба в ед..
+
+&quot;Damage:&quot;-Урон моба в ед..
+
+&quot;Faction:&quot;-Фракция моба,то есть как он
+будет себя вести.
+
+&quot;Mount:&quot;-На ком будет сидеть моб.
+
+&quot;Equipment:&quot;-Список брони и оружия,
+которое будет на мобе.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="wip">
+       <attribute name="title">
+        <string>Wip</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <italic>true</italic>
+            <bold>true</bold>
+            <underline>false</underline>
+            <strikeout>false</strikeout>
+            <kerning>true</kerning>
+           </font>
+          </property>
+          <property name="text">
+           <string>WIP</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="back">
+      <property name="styleSheet">
+       <string notr="true">color: #ffffff;
+background: #414141;
+border-radius: 5px;
+height: 25px</string>
+      </property>
+      <property name="text">
+       <string>Обратно</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

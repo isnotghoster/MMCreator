@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Designer</class>
+ <widget class="QMainWindow" name="Designer">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>377</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MMCreator</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Ico.png</normaloff>../Ico.png</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: #121212;</string>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>22</pointsize>
+        <weight>75</weight>
+        <italic>false</italic>
+        <bold>true</bold>
+        <underline>false</underline>
+        <strikeout>false</strikeout>
+        <stylestrategy>PreferAntialias</stylestrategy>
+        <kerning>true</kerning>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #ffffff</string>
+      </property>
+      <property name="text">
+       <string extracomment="Название. Прикинь ять,название.">
+MythicMobs
+Creator
+</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: #ffffff</string>
+      </property>
+      <property name="text">
+       <string>error 404</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="help">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: #414141;
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string>Помощь</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="New_mob">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: #414141;
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string> Lite Новый моб</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="custom_item">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: #414141;
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string>Lite Кастомный предмет</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="c_item_table">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: #414141;
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string>WIP Таблица предметов</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Open_file">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: #414141;
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(0, 170, 0);
+}
+
+QPushButton::pressed {
+    background-color:rgb(0, 255, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string> WIP Открыть файл</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="exit">
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	color: #ffffff;
+	background: rgb(85, 0, 0);
+	border-radius: 5px;
+	height: 25px
+}
+
+QPushButton::hover {
+    background-color: rgb(170, 0, 0);
+}
+
+QPushButton::pressed {
+    background-color: rgb(224, 0, 0);     
+}</string>
+      </property>
+      <property name="text">
+       <string>Выйти</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
